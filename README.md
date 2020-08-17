@@ -27,13 +27,13 @@ The agent used for this project is [Bull Exporter](https://github.com/UpHabit/bu
 
 ### Grafana Config
 
-For config in Grafana like allow embedding graph or other config you can access and update [grafana.ini](https://github.com/kiwfy/taurus-queue/tree/master/grafana/grafana.ini).
+For config in Grafana like allow embedding graph or other config you can access and update [grafana.ini](https://github.com/kiwfy/taurus-monitoring/blob/master/grafana/grafana.ini).
 
-For fixed or updates you can change the [dashboard.json](https://github.com/kiwfy/taurus-queue/tree/master/grafana/dashboards/dashboards.json).
+For fixed or updates taurus metrics you can change the [dashboard.json](https://github.com/kiwfy/taurus-monitoring/blob/master/grafana/dashboards/dashboard.json).
 
-For update or input another datasource type you can configure in [datasource.yaml](https://github.com/kiwfy/taurus-queue/tree/master/grafana/provisioning/datasources/datasource.yaml)
+For update or input another datasource type you can configure in [datasource.yaml](https://github.com/kiwfy/taurus-monitoring/blob/master/grafana/provisioning/datasources/datasource.yaml)
 
-**For new dashboards you can just create another json in [dashboard](https://github.com/kiwfy/taurus-queue/tree/master/grafana/dashboards) folder**
+**For new dashboards you can just create another json in [dashboard](https://github.com/kiwfy/taurus-monitoring/tree/master/grafana/dashboards) folder**
 
 ### Production
 
