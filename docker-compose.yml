@@ -1,0 +1,31 @@
+version: '3.7'
+
+networks:
+  backend:
+    external:
+      name: ${REDIS_NETWORK:-taurus-monitor-networking}
+
+services:
+  taurus-monintoring-exporter:
+    container_name: taurus-monintoring-exporter
+    image: uphabit/bull_exporter:latest
+    environment:
+      - EXPORTER_REDIS_URL=redis://${REDIS_HOST:-localhost}:${REDIS_PORT:-6379}/0
+    networks:
+      - backend
+
+  taurus-monintoring-prometheus:
+    build: ./prometheus
+    container_name: taurus-monintoring-prometheus
+    ports:
+      - 9090:9090
+    networks:
+      - backend
+
+  taurus-monintoring-grafana:
+    build: ./grafana
+    container_name: taurus-monintoring-grafana
+    ports:
+      - 3000:3000
+    networks:
+      - backend
