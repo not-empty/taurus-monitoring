@@ -35,6 +35,10 @@ For update or input another datasource type you can configure in [datasource.yam
 
 **For new dashboards you can just create another json in [dashboard](https://github.com/kiwfy/taurus-queue/tree/master/grafana/dashboards) folder**
 
+### Production
+
+For production it's necessary configure the environment `EXPORTER_REDIS_URL` with redis url connection. Ex: redis://localhost:6379/0
+
 ### Development
 
 Want to contribute? Great!
