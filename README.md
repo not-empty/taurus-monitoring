@@ -48,7 +48,9 @@ In development if you want to change some default values, you need to create a e
 | EXPORTER_AUTODISCOVER | -                        | Set to '0' or 'false' to disable queue discovery|
 | DOCKER_REDIS_NETWORK  | taurus-monitor-networking| **Developement environment**                    |
 
-**If you has many queues and need to split that, you can do that put all queue names separated with space in EXPORTER_QUEUES and put EXPORTER_AUTODISCOVER 0 or false**
+### Split Queues in monitoring machines
+
+If you has many queues and need to split that, you can do that put all queue names separated with space in **EXPORTER_QUEUES** and put **EXPORTER_AUTODISCOVER** 0 or false
 
 ### Development
 
