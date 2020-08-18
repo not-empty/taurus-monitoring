@@ -50,7 +50,7 @@ In development if you want to change some default values, you need to create a e
 
 ### Split Queues in monitoring machines
 
-If you has many queues and need to split that, you can do that put all queue names separated with space in **EXPORTER_QUEUES** and put **EXPORTER_AUTODISCOVER** 0 or false
+If you has many queues and need to split, you can do that put all queue names separated with space in **EXPORTER_QUEUES** and put **EXPORTER_AUTODISCOVER** 0 or false
 
 ### Development
 
