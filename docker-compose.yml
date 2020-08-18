@@ -3,14 +3,18 @@ version: '3.7'
 networks:
   backend:
     external:
-      name: ${REDIS_NETWORK:-taurus-monitor-networking}
+      name: ${DOCKER_REDIS_NETWORK:-taurus-monitor-networking}
 
 services:
   taurus-monintoring-exporter:
     container_name: taurus-monintoring-exporter
     image: uphabit/bull_exporter:latest
     environment:
-      - EXPORTER_REDIS_URL=redis://${REDIS_HOST:-localhost}:${REDIS_PORT:-6379}/0
+      - EXPORTER_REDIS_URL=${EXPORTER_REDIS_URL:-redis://localhost:6379/0}
+      - EXPORTER_PREFIX=${EXPORTER_PREFIX:-bull}
+      - EXPORTER_STAT_PREFIX=${EXPORTER_STAT_PREFIX:-bull_queue_}
+      - EXPORTER_QUEUES=${EXPORTER_QUEUES:-}
+      - EXPORTER_AUTODISCOVER=${EXPORTER_AUTODISCOVER:-}
     networks:
       - backend
 
