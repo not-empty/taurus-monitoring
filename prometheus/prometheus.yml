@@ -19,4 +19,3 @@ scrape_configs:
   static_configs:
   - targets:
     - taurus-monintoring-exporter:9538
-    - taurus-monintoring-grafana:3000
