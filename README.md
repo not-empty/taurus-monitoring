@@ -23,7 +23,7 @@ docker-compose up
 
 ### Agent
 
-The agent used for this project is [Bull Exporter](https://github.com/UpHabit/bull_exporter). That project is an official export shared in [Bull project](https://github.com/OptimalBits/bull).
+The agent used for this project is [Bull Exporter](https://github.com/kiwfy/taurus-exporter). That project is an official export shared in [Taurus project](https://github.com/kiwfy/taurus-queue).
 
 ### Grafana Config
 

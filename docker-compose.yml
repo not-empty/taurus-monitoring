@@ -8,7 +8,7 @@ networks:
 services:
   taurus-monintoring-exporter:
     container_name: taurus-monintoring-exporter
-    image: uphabit/bull_exporter:latest
+    image: kiwfydev/taurus-exporter:latest
     environment:
       - EXPORTER_REDIS_URL=${EXPORTER_REDIS_URL:-redis://localhost:6379/0}
       - EXPORTER_PREFIX=${EXPORTER_PREFIX:-bull}
