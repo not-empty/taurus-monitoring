@@ -9,12 +9,15 @@ services:
   taurus-monintoring-exporter:
     container_name: taurus-monintoring-exporter
     image: kiwfydev/taurus-exporter:latest
+    ports:
+      - 9538:9538
     environment:
       - EXPORTER_REDIS_URL=${EXPORTER_REDIS_URL:-redis://localhost:6379/0}
       - EXPORTER_PREFIX=${EXPORTER_PREFIX:-bull}
       - EXPORTER_STAT_PREFIX=${EXPORTER_STAT_PREFIX:-bull_queue_}
       - EXPORTER_QUEUES=${EXPORTER_QUEUES:-}
       - EXPORTER_AUTODISCOVER=${EXPORTER_AUTODISCOVER:-}
+      - QUEUES_TO_FOLLOW=${QUEUES_TO_FOLLOW:-}
     networks:
       - backend
 

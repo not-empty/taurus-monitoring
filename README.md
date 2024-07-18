@@ -5,6 +5,20 @@
 
 Project to monitoring all taurus queus using grafana and prometheus.
 
+### Configuration
+
+Using .env.example to create you .env file with all your configurations.
+
+```sh
+cp .env.example .env
+```
+
+If you not use a existing docker networking, create default project network
+
+```sh
+docker network create taurus-monitor-networking
+```
+
 ### Run
 
 Requires [Docker](https://www.docker.com/get-started) and [Docker Compose](https://docs.docker.com/compose/install/) tool.

@@ -5,6 +5,6 @@ datasources:
 - name: Taurus-monitoring
   type: prometheus
   orgId: 1
-  url: taurus-monintoring-prometheus:9090
+  url: http://taurus-monintoring-prometheus:9090
   readOnly: false
   editable: true
